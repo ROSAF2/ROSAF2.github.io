@@ -523,6 +523,7 @@ textarea{
         margin: 10px;
         width: 800px;
         display: flex;
+        flex-direction: row;
     }
     /*3.3 List Top 10*/
     .list.top li{
@@ -553,6 +554,28 @@ textarea{
     /*Right Div*/
     .list.top li .right-div div{
         margin: 0px 10px;
+    }
+        /*4.1 Message Box*/
+    #comment-form-container, div#comments{
+        margin:20px auto 18px auto;
+        width: 820px;
+        padding: 10px;
+    }
+    #comment-form-container{
+        background: #111;
+        color: white;
+        border-radius: 10px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    textarea{
+        resize: none;
+        width: 780px;
+        height: 100px;
+        font-size: 20px;
     }
     /*6. Contact Form--------------------------------------------------------------------------------------*/
     /*6.1 Form*/
