@@ -1,0 +1,174 @@
+[
+    {
+        "recent10Tracks": [
+            {
+                "songName": "La Demarche",
+                "artistName":"Yann Tiersen",
+                "image": "YannTiersen.jpg",
+                "listenedAgo": "Scrobbling now"
+            },
+            {
+                "songName": "Sweet Child O' Mine",
+                "artistName":"Guns N' Roses",
+                "image": "GunsNRoses.jpg",
+                "listenedAgo": "5 minutes ago"
+            },
+            {
+                "songName": "Nothing Else Matters",
+                "artistName":"Metallica",
+                "image": "Metallica.jpg",
+                "listenedAgo": "13 minutes ago"
+            },
+            {
+                "songName": "Pretty Pounding",
+                "artistName":"Michael Clark",
+                "image": "MichaelClark.jpg",
+                "listenedAgo": "45 minutes ago"
+            },
+            {
+                "songName": "Sweet Dreams",
+                "artistName":"Marilyn Manson",
+                "image": "MarilynManson.jpg",
+                "listenedAgo": "1 hour ago"
+            },
+            {
+                "songName": "Sanctuary (Opening)",
+                "artistName":"Utada Hikari",
+                "image": "UtadaHikaru.jpg",
+                "listenedAgo": "1 hour ago"
+            },
+            {
+                "songName": "Baby Come Back",
+                "artistName":"Player",
+                "image": "Player.jpg",
+                "listenedAgo": "1 hour ago"
+            },
+            {
+                "songName": "Lady",
+                "artistName":"Modjo",
+                "image": "Modjo.jpg",
+                "listenedAgo": "1 hour ago"
+            },
+            {
+                "songName": "Another Brick In The Wall",
+                "artistName":"Pink Floyd",
+                "image": "PinkFloyd.jpg",
+                "listenedAgo": "2 hours ago"
+            },
+            {
+                "songName": "Careless Whisper",
+                "artistName":"Wham",
+                "image": "Wham.jpg",
+                "listenedAgo": "2 hours ago"
+            }
+        ]
+    },
+    {
+        "top8Artists": [
+            {
+                "artistName": "Yann Tiersen",
+                "image": "YannTiersen.jpg",
+                "totalListens": "28,669,647 plays"
+            },
+            {
+                "artistName": "Beatles",
+                "image": "TheBeatles.jpg",
+                "totalListens": "26,743,034 plays"
+            },
+            {
+                "artistName": "Daft Punk",
+                "image": "DaftPunk.jpg",
+                "totalListens": "21,564,699 plays" 
+            },
+            {
+                "artistName": "Link Park",
+                "image": "LinkinPark.jpg",
+                "totalListens": "17,805,987 plays"
+            },
+            {
+                "artistName": "Oasis",
+                "image": "Oasis.jpg",
+                "totalListens": "12,643,257 plays"
+            },
+            {
+                "artistName": "Luis Miguel",
+                "image": "LuisMiguel.jpg",
+                "totalListens": "9,643,678 plays"
+            },
+            {
+                "artistName": "Red Hot Chili Peppers",
+                "image": "RedHotChilliPeppers.jpg",
+                "totalListens": "7,577,953 plays"
+            },
+            {
+                "artistName": "Utada Hikaru",
+                "image": "UtadaHikaru.jpg",
+                "totalListens": "7,537,965 plays"
+            }
+        ]
+    },
+    {
+        "top10Tracks": [
+            {
+                "songName": "Numb",
+                "artistName": "Linkin Park",
+                "image": "LinkinPark.jpg",
+                "totalListens": 73936
+            },
+            {
+                "songName": "Californication",
+                "artistName": "Red Hot Chili Peppers",
+                "image": "RedHotChilliPeppers.jpg",
+                "totalListens": 69486
+            },
+            {
+                "songName": "Fly me to the moon (Evangelion)",
+                "artistName": "Claire, Bart Howard",
+                "image": "Eva.jpg",
+                "totalListens": 62967
+            },
+            {
+                "songName": "La Incondicional",
+                "artistName": "Luis Miguel",
+                "image": "LuisMiguel.jpg",
+                "totalListens": 47397
+            },
+            {
+                "songName": "La Valse d'Amélie",
+                "artistName": "Yann Tiersen",
+                "image": "YannTiersen.jpg",
+                "totalListens": 39864
+            },
+            {
+                "songName": "Simple and Clean",
+                "artistName": "Utada Hikaru",
+                "image": "UtadaHikaru.jpg",
+                "totalListens": 33431
+            },
+            {
+                "songName": "Chandelier",
+                "artistName": "Sia",
+                "image": "Sia.jpg",
+                "totalListens": 31764
+            },
+            {
+                "songName": "Get Lucky",
+                "artistName": "Daft Punk",
+                "image": "DaftPunk.jpg",
+                "totalListens": 25333
+            },
+            {
+                "songName": "I Was Made For Lovin' You",
+                "artistName": "Kiss",
+                "image": "Kiss.jpg",
+                "totalListens": 19090
+            },
+            {
+                "songName": "Don't Look Back In Anger",
+                "artistName": "Oasis",
+                "image": "Oasis.jpg",
+                "totalListens": 17618
+            }
+        ]  
+    }
+]

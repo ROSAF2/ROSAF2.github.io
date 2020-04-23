@@ -1,0 +1,461 @@
+/*Table of contents
+
+1.- Global Styles
+2.- Header
+    2.1 Navigation Bar
+    2.2.- Banner
+        2.2.1- Video
+        2.2.2- Profile Pic and Name
+3.- Content
+    3.1 List Recent 10
+    3.2 Grid Top 8
+    3.3 List Top 10
+4.- Comment Section
+5.- Footer
+6.- Contact Form
+7.- Media Queries
+
+
+*/
+
+/*1. Global Styles--------------------------------------------------------------------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #111;
+    background-color: #eee;
+}
+a{
+    text-decoration: none;
+    font-weight: 500;
+}
+.sectionTitle{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 80px;
+}
+.list{
+    margin: 20px auto;
+    max-width: 830px;
+    border-radius: 10px;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    border: 0px;
+    color: white;
+   background-color: #333;
+   cursor: pointer;
+}
+.button:hover{
+    color: #111;
+    background-color: #eee;
+ }
+/*2. Header------------------------------------------------------------------------------------------*/
+/*2.1 Navigation Bar*/
+nav{
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background:#eee;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+nav h1{
+    font-weight: 400;
+    margin-left: 15px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav li{
+    list-style: none;
+}
+nav a{
+    color: #111;
+    padding: 10px;
+    margin: 0px 10px;
+}
+nav a:hover{
+    background-color: #333;
+    color: #eee;
+    border-radius: 5px;
+}
+/*2.2 Banner*/
+#banner{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Special prperties for the video*/
+    position:relative;
+    overflow: hidden;
+}
+/*2.2.1 Video*/
+#header-video{ 
+    /*Special prperties for the video*/
+    z-index: -1;
+    position:absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+/*2.2.2 Profile Pic and Name*/
+#banner div{ 
+    display: flex;
+    flex-direction: column;
+}
+#banner div div:first-child{
+    border-radius: 50%;
+    background: url("../img/OP.jpg") no-repeat center center/cover;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+#banner div div:nth-child(2){
+    font-size: 30px;
+    color: #eee;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    margin: 10px;
+}
+/*Contents------------------------------------------------------------------------------------------*/
+
+/*3.1 List Recent 10------------------------------------------------------------------------------------------*/
+.list.recent li{
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.list.recent li div{
+    display: flex;
+    align-items: center;
+}
+/*Spacing items on the left side*/
+.list.recent li .left-div div{
+    margin-right: 15px;
+}
+.list.recent li .left-div div div:nth-child(1){
+    font-size: 17px;
+    font-weight: 700;
+}
+.list.recent li .left-div div div:nth-child(2){
+    margin-right: 10px;
+}
+/*Spacing items on the right side*/
+.list.recent li .right-div div:nth-child(2){
+    margin: 0px 10px;
+}
+/*3.2 Grid Top 8*/
+#grid-container{
+    border-radius: 10px;
+    background-color: #111;
+    height: 3000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+/*javascript produced div*/
+#grid-container div{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    color: #eee;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+    padding: 5px;
+    margin: 10px;
+}
+#grid-artist{
+    font-weight: 500; 
+}
+#grid-listens{
+    justify-content:flex-end; 
+}
+
+/*3.3 List Top 10------------------------------------------------------------------------------------------*/
+.list.top li{
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*Left and Right Divs*/
+.list.top li div{
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+/*Left Div*/
+.list.top li div.left-div{
+    padding: 5px 15px;
+    background-color: white;
+    font-size: 25px;
+    font-weight: 1000;
+    display: flex;
+}
+/*Song and Artis Div*/
+.list.top li div.left-div div:nth-child(3){
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.list.top li div.left-div div:nth-child(3) div:first-child{
+    font-size: 24px;
+    font-weight: 700;
+}
+.list.top li div.left-div div:nth-child(3) div:last-child{
+    font-size: 18px;
+    font-weight: 700;
+}
+/*Right Div*/
+.list.top li .right-div{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#barchart{
+    font-size: 18px;
+    font-weight: 300;
+    height:50px;
+    color: #eee;
+    background-color: #111;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Heart Styles*/
+.love{
+    background:url("/assets/img/HeartOff.jpg") no-repeat center center/cover;
+}
+.darkLove{
+    background:url("/assets/img/HeartOn.jpg") no-repeat center center/cover;
+}
+.love, .darkLove{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+/*4. Comment Section--------------------------------------------------------------------------------------*/
+#comment-form-container, div#comments{
+    margin:20px auto 18px auto;
+    max-width: 500px;
+    padding: 10px;
+}
+#comment-form-container{
+    background: #111;
+    color: white;
+    border-radius: 10px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+textarea{
+    resize: none;
+    width: 460px;
+    height: 150px;
+    font-size: 20px;
+  }
+#name-and-button{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#name-and-button label, #nameInput{
+    font-size: 20px;
+}
+.comment{
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: solid #111 1px;
+}
+.name-date{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight:500;
+}
+.name-date div:last-child{
+    font-weight:400;
+}
+.actualComment{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0px 20px 10px 20px ;
+}
+
+/*5. Footer--------------------------------------------------------------------------------------*/
+footer{
+    background-image: url("/assets/img/Footer.jpg");
+    width: 100%;
+    height: 300px;
+    margin-top: auto;
+    font-size: 50px;
+}
+/*6. Contact Form--------------------------------------------------------------------------------------*/
+#contact-form-container{
+    padding: 20px;
+    background: #111;
+    color: white;
+    border-radius: 10px;
+    margin:70px auto 18px auto;
+    max-width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#contact-form-container form{
+    width: 70%;
+    margin-bottom: 20px;
+}
+.label-and-input{
+    margin-bottom: 30px;
+}
+.label-and-input label{
+   display: block;
+   margin: 20px 0px;
+   font-size: 20px;
+}
+.label-and-input input{
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+ }
+ #contactButton{
+     display: block;
+     width: 100%;
+     padding: 10px;
+     border-radius: 10px;
+     font-size: 24px;
+     font-weight: 600;
+     border: 0px;
+     color: white;
+    background-color: #333;
+    cursor: pointer;
+ }
+
+ #feedback{
+     text-align: center;
+     margin-top: 50px;
+ }
+/*7. Media Queries---------------------------------------------------------------------------------------------*/
+
+/*3.2 Grid Top 8*/
+@media (min-width:550px){
+    #grid-container{
+        background-color: #111;
+        height: auto;
+        max-width: 1500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #banner div{ 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+/*3.3 List Top 10*/
+@media (min-width:800px){
+    .list.top li{
+        border-radius: 5px;
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        width: 800px;
+        height: 130px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /*Left and Right Divs*/
+    .list.top li div{
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    }
+    /*Right Div*/
+    .list.top li .right-div div{
+        margin: 0px 10px;
+    }
+    /*3.1 List Recent 10*/
+    .list.recent li{
+        border-radius: 5px;
+        background-color: white;
+        padding: 5px 20px;
+        margin: 10px;
+        width: 800px;
+        height: 70px;
+        display: flex;
+        justify-content: space-ar;
+    }
+    /*Comment Section*/
+    #comment-form-container, div#comments{
+        margin:20px auto 18px auto;
+        max-width: 820px;
+        padding: 10px;
+    }
+    #comment-form-container{
+        background: #111;
+        color: white;
+        border-radius: 10px;
+        height: 175px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    textarea{
+        resize: none;
+        width: 770px;
+        height: 75px;
+        font-size: 20px;
+      }
+}

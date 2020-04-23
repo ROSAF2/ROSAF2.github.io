@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="/assets/js/main.js"></script>
+    <title>My Web 1 Site</title>
+</head>
+<body>
+    <!-- Header-->
+    <!--Navigation Bar-->
+    <nav>
+        <h1>My Web 1 Site</h1>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <!-- Banner-->
+    <div id="banner"> 
+        <video id="header-video" autoplay muted loop> 
+            <source src="/assets/video/banner.mp4" type="video/mp4">
+        </video>
+        <div>
+            <!-- Profile Pic-->
+            <div></div>
+            <!-- User Name-->
+            <div>ROSAF2</div>
+        </div>
+    </div>
+    <!--Content---------------------------------------------------------------------------------------->
+    <!--List Recent songs-->
+    <section>
+        <h1 class="sectionTitle">Recent Songs</h1>
+        <ul class="list recent">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <div style="background: url(assets/img/Play.jpg) no-repeat center center/cover"></div>
+    <!--Grid Top 8-->
+    <section>
+    <h1 class="sectionTitle">Top Artists</h1>
+    <div id="grid-container"><!--javascript produces a div that goes right in here--></div>
+    </section>
+    <!--List Top 10-->
+    <section>
+        <h1 class="sectionTitle">Top Songs</h1>
+        <ul class="list top">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <!--Comment Section-->
+    <section>
+        <h1 class="sectionTitle">Comment Section</h1>
+        <!--Message Box-->
+        <form id="comment-form-container">
+            <textarea id="commenText" name="textArea" placeholder="Write a comment."></textarea>
+            <div id="name-and-button">
+                <div>
+                    <label for="nameInput">Name</label>
+                    <input id="nameInput" type="text" name="nameInput"/>
+                </div>
+                <div>
+                    <button class="button commentSection" type="submit">Post</button>
+                </div>
+            </div>
+        </form>
+        <!--Comments-->
+        <div id="comments">
+            <div class="comment">
+                <div class="name-date">
+                    <div>Someone</div>
+                    <div>12/17/2068</div>
+                </div>
+                <div class="actualComment">
+                    Anyone watching this in 2068?
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
