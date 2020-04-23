@@ -1,23 +1,26 @@
 /*Table of contents
 
 1.- Global Styles
+    1.1 Heart Styles
 2.- Header
     2.1 Navigation Bar
-    2.2.- Banner
-        2.2.1- Video
-        2.2.2- Profile Pic and Name
-3.- Content
+    2.2. Banner
+        2.2.1 Video
+        2.2.2 Profile Pic and Name
+3.- Contents
     3.1 List Recent 10
     3.2 Grid Top 8
     3.3 List Top 10
 4.- Comment Section
+    4.1 Comment Box
+    4.2 Comments
 5.- Footer
 6.- Contact Form
+    6.1 Form
+    6.2 Feedback
 7.- Media Queries
-
-
 */
-
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*1. Global Styles--------------------------------------------------------------------------------------*/
 *{
     margin: 0px;
@@ -42,7 +45,7 @@ a{
 }
 .list{
     margin: 20px auto;
-    width: 480px;
+    width: 320px;
     border-radius: 10px;
     background-color: #111;
     display: flex;
@@ -65,8 +68,21 @@ a{
     color: #111;
     background-color: #eee;
  }
+ /*1.1 Heart Styles----------------------------------------------------------------------------------*/
+.love{
+    background:url("/assets/img/HeartOff.jpg") no-repeat center center/cover;
+}
+.darkLove{
+    background:url("/assets/img/HeartOn.jpg") no-repeat center center/cover;
+}
+.love, .darkLove{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*2. Header------------------------------------------------------------------------------------------*/
-/*2.1 Navigation Bar*/
+/*2.1 Navigation Bar----------------------------------------------------------------------------------*/
 nav{
     z-index: 1;
     position: sticky;
@@ -109,7 +125,7 @@ nav a:hover{
     position:relative;
     overflow: hidden;
 }
-/*2.2.1 Video*/
+/*2.2.1 Video--------------------------------------------------------------------------------------*/
 #header-video{ 
     /*Special prperties for the video*/
     z-index: -1;
@@ -138,17 +154,17 @@ nav a:hover{
     text-shadow: 2px 2px 2px black;
     margin: 10px;
 }
-/*Contents------------------------------------------------------------------------------------------*/
-
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*3. Contents------------------------------------------------------------------------------------------*/
 /*3.1 List Recent 10------------------------------------------------------------------------------------------*/
 .list.recent li{
     border-radius: 5px;
     background-color: white;
     padding: 5px;
     margin: 10px;
-    width: 475px;
-    height: 70px;
+    width: 300px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .list.recent li div{
@@ -172,11 +188,11 @@ nav a:hover{
     padding: 0px 20px;
     margin: 0px 10px;
 }
-/*3.2 Grid Top 8*/
+/*3.2 Grid Top 8----------------------------------------------------------------------*/
 #grid-container{
     border-radius: 10px;
     background-color: #111;
-    height: 3000px;
+    height: 2560px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,8 +201,8 @@ nav a:hover{
 }
 /*javascript produced div*/
 #grid-container div{
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     color: #eee;
@@ -201,15 +217,13 @@ nav a:hover{
 #grid-listens{
     justify-content:flex-end; 
 }
-
 /*3.3 List Top 10------------------------------------------------------------------------------------------*/
 .list.top li{
     border-radius: 5px;
     background-color: white;
     padding: 10px;
     margin: 10px;
-    width: 475px;
-    height: 130px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -222,27 +236,32 @@ nav a:hover{
     align-items: center;
 }
 /*Left Div*/
-.list.top li div.left-div{
-    padding: 5px 15px;
-    background-color: white;
-    font-size: 25px;
-    font-weight: 1000;
+.list.top li .left-div{
+    padding: 5px 10px;
     display: flex;
+    justify-content: space-evenly;
 }
-/*Song and Artis Div*/
-.list.top li div.left-div div:nth-child(3){
-    background-color: white;
+/*These long names is for practising*/
+.list.top li .left-div > div:nth-child(1){
+    font-size: 23px;
+    font-weight: 700;
+    padding-right: 5px;
+}
+.list.top li .left-div > div:nth-child(3){
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
 }
-.list.top li div.left-div div:nth-child(3) div:first-child{
-    font-size: 24px;
-    font-weight: 700;
-}
-.list.top li div.left-div div:nth-child(3) div:last-child{
+.list.top li .left-div > div:nth-child(3) div:first-child{
     font-size: 18px;
     font-weight: 700;
+}
+.list.top li .left-div > div:nth-child(3) div:last-child{
+    font-size: 16px;
+    font-weight: 400;
 }
 /*Right Div*/
 .list.top li .right-div{
@@ -262,22 +281,12 @@ nav a:hover{
     justify-content: center;
     align-items: center;
 }
-/*Heart Styles*/
-.love{
-    background:url("/assets/img/HeartOff.jpg") no-repeat center center/cover;
-}
-.darkLove{
-    background:url("/assets/img/HeartOn.jpg") no-repeat center center/cover;
-}
-.love, .darkLove{
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*4. Comment Section--------------------------------------------------------------------------------------*/
+/*4.1 Message Box----------------------------------------------------------------------------*/
 #comment-form-container, div#comments{
     margin:20px auto 18px auto;
-    max-width: 450px;
+    width: 300px;
     padding: 10px;
 }
 #comment-form-container{
@@ -292,8 +301,8 @@ nav a:hover{
 }
 textarea{
     resize: none;
-    width: 400px;
-    height: 140px;
+    width: 280px;
+    height: 130px;
     font-size: 20px;
   }
 #name-and-button{
@@ -306,6 +315,10 @@ textarea{
 #name-and-button label, #nameInput{
     font-size: 20px;
 }
+#nameInput{
+    width: 80%;
+}
+/*4.2 Comments----------------------------------------------------------------------------*/
 .comment{
     padding: 15px 0px;
     display: flex;
@@ -327,23 +340,32 @@ textarea{
     font-weight: 400;
     padding: 0px 20px 10px 20px ;
 }
-
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*5. Footer--------------------------------------------------------------------------------------*/
 footer{
     background-image: url("/assets/img/Footer.jpg");
     width: 100%;
     height: 300px;
-    margin-top: auto;
-    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+footer div{
+    border-radius: 50%;
+    background: url("../img/OP.jpg") no-repeat center center/cover;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*6. Contact Form--------------------------------------------------------------------------------------*/
+/*6.1 Form-----------------------------------------------------------------------------------------*/
 #contact-form-container{
-    padding: 20px;
     background: #111;
     color: white;
     border-radius: 10px;
     margin:70px auto 18px auto;
-    max-width: 500px;
+    width: 300px;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -351,7 +373,7 @@ footer{
     align-items: center;
 }
 #contact-form-container form{
-    width: 70%;
+    width: 80%;
     margin-bottom: 20px;
 }
 .label-and-input{
@@ -379,14 +401,17 @@ footer{
     background-color: #333;
     cursor: pointer;
  }
-
+/*6.2 Feedback----------------------------------------------------------------------------*/
  #feedback{
      text-align: center;
      margin-top: 50px;
  }
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*7. Media Queries---------------------------------------------------------------------------------------------*/
 
 /*3.2 Grid Top 8*/
+/*550px*/
 @media screen and (min-width:550px){
     #grid-container{
         background-color: #111;
@@ -403,8 +428,84 @@ footer{
         align-items: center;
     }
 }
-/*General*/
-@media screen and (min-width:840px){
+/*500px*/
+@media screen and (min-width:500px){
+/*3.1 List Recent 10------------------------------------------------------------------------------------------*/
+.list{
+    margin: 20px auto;
+    width: 490px;
+    border-radius: 10px;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list.recent li{
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*3.3 List Top 10------------------------------------------------------------------------------------------*/
+.list.top li{
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px 0px;
+    margin: 10px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*4. Comment Section--------------------------------------------------------------------------------------*/
+/*4.1 Message Box*/
+#comment-form-container, div#comments{
+    margin:20px auto 18px auto;
+    width: 480px;
+    padding: 10px;
+}
+#comment-form-container{
+    background: #111;
+    color: white;
+    border-radius: 10px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+textarea{
+    resize: none;
+    width: 400px;
+    height: 130px;
+    font-size: 20px;
+  }
+  /*6. Contact Form--------------------------------------------------------------------------------------*/
+  /*6.1 Form*/
+  #contact-form-container{
+    background: #111;
+    color: white;
+    border-radius: 10px;
+    margin:70px auto 18px auto;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#contact-form-container form{
+    width: 70%;
+    margin-bottom: 20px;
+}
+}
+/*850px*/
+@media screen and (min-width:850px){
+    /*1. Global Styles*/
     .list{
         margin: 20px auto;
         width: 830px;
@@ -414,6 +515,16 @@ footer{
         flex-direction: column;
         align-items: center;
     }
+    /*3.1 List Recent 10*/
+    .list.recent li{
+        border-radius: 5px;
+        background-color: white;
+        padding: 5px 20px;
+        margin: 10px;
+        width: 800px;
+        display: flex;
+    }
+    /*3.3 List Top 10*/
     .list.top li{
         border-radius: 5px;
         background-color: white;
@@ -432,41 +543,33 @@ footer{
     justify-content: flex-start;
     align-items: center;
     }
+    /*Left Div*/
+    .list.top li .left-div{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     /*Right Div*/
     .list.top li .right-div div{
         margin: 0px 10px;
     }
-    /*3.1 List Recent 10*/
-    .list.recent li{
-        border-radius: 5px;
-        background-color: white;
-        padding: 5px 20px;
-        margin: 10px;
-        width: 800px;
-        height: 70px;
-        display: flex;
-        justify-content: space-ar;
-    }
-    /*Comment Section*/
-    #comment-form-container, div#comments{
-        margin:20px auto 18px auto;
-        max-width: 820px;
-        padding: 10px;
-    }
-    #comment-form-container{
+    /*6. Contact Form--------------------------------------------------------------------------------------*/
+    /*6.1 Form*/
+    #contact-form-container{
         background: #111;
         color: white;
         border-radius: 10px;
-        height: 175px;
+        margin:70px auto 18px auto;
+        width: 500px;
+        height: 500px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
     }
-    textarea{
-        resize: none;
-        width: 770px;
-        height: 75px;
-        font-size: 20px;
-      }
+    #contact-form-container form{
+        width: 70%;
+        margin-bottom: 20px;
+    }
 }

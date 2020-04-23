@@ -113,7 +113,6 @@ function thirdObject(obj){
         //Track Number
         let divCounter = document.createElement("div");
         divCounter.textContent = `${idx+1}`;
-        divCounter.style.fontSize = "30px";
         //Storing counter in left div
         divLeft.append(divCounter);
 
@@ -137,6 +136,7 @@ function thirdObject(obj){
         textDiv.append(artistName);
         //Storing text div inside left div
         divLeft.append(textDiv);
+
         //Storing left div inside the item
         lis[idx].append(divLeft);
 
@@ -147,7 +147,7 @@ function thirdObject(obj){
         //Barchart
         let barchart = document.createElement("div");
         barchart.id ="barchart";
-        barchart.style.width = `${Math.round(250*element.totalListens/max)}px`;
+        barchart.style.width = `${Math.round(200*element.totalListens/max)}px`;
         barchart.textContent = element.totalListens;
         //Storing barchart in right div
         divRight.append(barchart);
@@ -163,7 +163,7 @@ function thirdObject(obj){
         //Heart Icon
         let heartIcon = document.createElement("div");
         heartIcon.classList.add("love");
-        //Storing play icon in right div
+        //Storing heart icon in right div
         divRight.append(heartIcon);
 
         //Storing right div inside the list item
