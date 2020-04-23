@@ -387,7 +387,7 @@ footer{
 /*7. Media Queries---------------------------------------------------------------------------------------------*/
 
 /*3.2 Grid Top 8*/
-@media (min-width:550px){
+@media screen and (min-width:550px){
     #grid-container{
         background-color: #111;
         height: auto;
@@ -403,8 +403,8 @@ footer{
         align-items: center;
     }
 }
-/*3.3 List Top 10*/
-@media (min-width:800px){
+/*General*/
+@media screen and (min-width:840px){
     .list{
         margin: 20px auto;
         width: 830px;
