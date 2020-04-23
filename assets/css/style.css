@@ -42,7 +42,7 @@ a{
 }
 .list{
     margin: 20px auto;
-    max-width: 830px;
+    width: 480px;
     border-radius: 10px;
     background-color: #111;
     display: flex;
@@ -146,7 +146,7 @@ nav a:hover{
     background-color: white;
     padding: 5px;
     margin: 10px;
-    width: 500px;
+    width: 475px;
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -157,17 +157,19 @@ nav a:hover{
 }
 /*Spacing items on the left side*/
 .list.recent li .left-div div{
-    margin-right: 15px;
+    padding: 10px;
 }
 .list.recent li .left-div div div:nth-child(1){
     font-size: 17px;
     font-weight: 700;
 }
-.list.recent li .left-div div div:nth-child(2){
-    margin-right: 10px;
-}
 /*Spacing items on the right side*/
+.list.recent li .right-div{
+    display: flex;
+    justify-content: space-around;
+}
 .list.recent li .right-div div:nth-child(2){
+    padding: 0px 20px;
     margin: 0px 10px;
 }
 /*3.2 Grid Top 8*/
@@ -206,7 +208,7 @@ nav a:hover{
     background-color: white;
     padding: 10px;
     margin: 10px;
-    width: 500px;
+    width: 475px;
     height: 130px;
     display: flex;
     flex-direction: column;
@@ -275,7 +277,7 @@ nav a:hover{
 /*4. Comment Section--------------------------------------------------------------------------------------*/
 #comment-form-container, div#comments{
     margin:20px auto 18px auto;
-    max-width: 500px;
+    max-width: 450px;
     padding: 10px;
 }
 #comment-form-container{
@@ -290,8 +292,8 @@ nav a:hover{
 }
 textarea{
     resize: none;
-    width: 460px;
-    height: 150px;
+    width: 400px;
+    height: 140px;
     font-size: 20px;
   }
 #name-and-button{
@@ -403,6 +405,15 @@ footer{
 }
 /*3.3 List Top 10*/
 @media (min-width:800px){
+    .list{
+        margin: 20px auto;
+        width: 830px;
+        border-radius: 10px;
+        background-color: #111;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .list.top li{
         border-radius: 5px;
         background-color: white;
