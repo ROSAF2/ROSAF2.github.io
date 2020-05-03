@@ -5,30 +5,25 @@ $(_ => {
 fetch("assets/json/music.json")
 .then(res => res.json())
 .then(data => {
-    data.forEach((obj,index) => {
-        switch (index) {
-            case 0:
-                firstObject(obj);
-                break;
-            case 1:
-                secondObject(obj);
-                break;
-            case 2:
-                thirdObject(obj);
-                break;
-        }
-    });
+
+    const {recent10Tracks, top8Artists, top10Tracks} = data //Decunstructing and pulling values from the array
+
+    firstKey(recent10Tracks);
+    secondKey(top8Artists);
+    thirdKey(top10Tracks);
     
 });
 
 //Recent Songs
-function firstObject(obj){
+function firstKey(array){
     //Recent 10
     //Extracting and appending the data
-    obj.recent10Tracks.forEach((element, idx) => {
-        //Creating List Item array
-        let lis = document.querySelectorAll(".list.recent li")
-    
+    array.forEach(element => {
+        //Obtaining the element which has both the class list and the class recent
+        let ul = document.querySelector(".list.recent");
+        //Creating a list item
+        let li = document.createElement("li");
+
         //Creating left div to put inside the left half of the item
         let divLeft = document.createElement("div");
         divLeft.classList.add("left-div");
@@ -54,7 +49,7 @@ function firstObject(obj){
         //Storing text div inside left div
         divLeft.append(textDiv);
         //Storing left div inside the item
-        lis[idx].append(divLeft);
+        li.append(divLeft);
     
         //Creating right div to put inside the right half of the item
         let divRight = document.createElement("div");
@@ -81,12 +76,14 @@ function firstObject(obj){
         divRight.append(longAgo);
     
         //Storing right div inside the list item
-        lis[idx].append(divRight);
+        li.append(divRight);
+        //Storing the list item inside the unordered list ul
+        ul.append(li);
         });
 }
 //Top 8 Artists
-function secondObject(obj){
-    obj.top8Artists.forEach(element => {
+function secondKey(array){
+    array.forEach(element => {
         let div = document.createElement("div");
         div.style.background = `url(assets/img/${element.image}) no-repeat center center/cover`;
         div.innerHTML = `<div id="grid-artist">${element.artistName}</div>` + 
@@ -95,16 +92,18 @@ function secondObject(obj){
     });
 }
 //Top 10 Songs
-function thirdObject(obj){
+function thirdKey(array){
     //Calculate Maximum
     let max = 0; 
-    obj.top10Tracks.forEach(element => {
+    array.forEach(element => {
     max = Math.max(max,element.totalListens);
     });
     //Extracting and appending the data
-    obj.top10Tracks.forEach((element, idx) => {
-        //Creating List Item array
-        let lis = document.querySelectorAll(".list.top li")
+    array.forEach((element, idx) => {
+        //Obtaining the element which has both the class list and the class top
+        let ul = document.querySelector(".list.top");
+        //Creating a list item
+        let li = document.createElement("li");
 
         //Creating left div to put inside the left half of the item
         let divLeft = document.createElement("div");
@@ -138,7 +137,7 @@ function thirdObject(obj){
         divLeft.append(textDiv);
 
         //Storing left div inside the item
-        lis[idx].append(divLeft);
+        li.append(divLeft);
 
         //Creating right div to put inside the right half of the item
         let divRight = document.createElement("div");
@@ -167,7 +166,9 @@ function thirdObject(obj){
         divRight.append(heartIcon);
 
         //Storing right div inside the list item
-        lis[idx].append(divRight);
+        li.append(divRight);
+        //Storing the list item inside the unordered list ul
+        ul.append(li);
     });
 }
 
